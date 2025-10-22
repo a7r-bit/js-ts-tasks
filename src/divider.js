@@ -6,5 +6,6 @@
  * @returns {number}
  */
 module.exports.divider = function divider(n, k) {
-  throw new Error('Not implemented');
+  if (k === 0 || !Number.isInteger(k)) throw Error('Bade Bing');
+  return `${Math.floor(n / k)} ${n % k}`;
 };

@@ -5,5 +5,24 @@
  * @returns {number}
  */
 module.exports.sumTwoNumbers = function sumTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  const first = variableToString(firstNumber);
+  const second = variableToString(secondNumber);
+
+  return first + second;
 };
+
+function variableToString(variable) {
+  switch (typeof variable) {
+    case 'number':
+      return Number(variable);
+
+    case 'string': {
+      let currentVariable = variable.trim();
+      currentVariable = currentVariable.replace(/\s/g, '');
+      return Number(currentVariable);
+    }
+
+    default:
+      return variable;
+  }
+}

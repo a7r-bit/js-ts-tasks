@@ -5,5 +5,13 @@
  * @returns {string}
  */
 module.exports.compareTwoNumbers = function compareTwoNumbers(firstNumber, secondNumber) {
-  throw new Error('Not implemented');
+  let res = Math.sign(firstNumber - secondNumber);
+  switch (res) {
+    case 1:
+      return '>';
+    case -1:
+      return '<';
+    case 0:
+      return '=';
+  }
 };

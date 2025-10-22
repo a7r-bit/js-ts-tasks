@@ -5,5 +5,10 @@
  * @returns {string}
  */
 module.exports.backToFront = function backToFront(str, symbolsCount) {
-  throw new Error('Not implemented');
+  if (str.length < symbolsCount) return str;
+
+  // let symbToPaste = str.substring(str.length - symbolsCount, str.length);
+  let symbToPaste = str.slice(-symbolsCount);
+
+  return symbToPaste + str + symbToPaste;
 };
