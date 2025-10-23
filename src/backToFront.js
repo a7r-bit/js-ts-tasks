@@ -7,7 +7,6 @@
 module.exports.backToFront = function backToFront(str, symbolsCount) {
   if (str.length < symbolsCount) return str;
 
-  // let symbToPaste = str.substring(str.length - symbolsCount, str.length);
   let symbToPaste = str.slice(-symbolsCount);
 
   return symbToPaste + str + symbToPaste;

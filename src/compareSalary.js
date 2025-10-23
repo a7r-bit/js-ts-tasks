@@ -9,7 +9,5 @@ module.exports.compareSalary = function compareSalary(firstSalary, secondSalary,
   let arrSalary = [firstSalary, secondSalary, thirdSalary];
   arrSalary.sort((a, b) => a - b);
 
-  let difference = arrSalary[2] - arrSalary[0];
-
-  return difference;
+  return arrSalary[2] - arrSalary[0];
 };
