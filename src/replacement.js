@@ -8,5 +8,25 @@
  * @returns {Array<number>}
  */
 module.exports.replacement = function replacement(arr) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let returnArray = [];
+
+  for (const element of arr) {
+    returnArray.push(replaceDigits(element));
+  }
+  return returnArray;
 };
+
+function replaceDigits(number) {
+  let stringNumber = number > 0 ? number.toString() : Math.abs(number).toString();
+
+  switch (stringNumber.length) {
+    case 1:
+      return 1;
+    case 2:
+      return 2;
+    case 3:
+      return 3;
+    default:
+      return 4;
+  }
+}

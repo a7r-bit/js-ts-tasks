@@ -1,3 +1,5 @@
+const commandConvert = require('cross-env/src/command');
+
 /**
  * Write a function which finds a maximal common substring of two given strings
  * example
@@ -9,5 +11,15 @@
  * @returns {number}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  throw new Error('Not implemented'); // remove me and write a solution
+  let maxSubstr = '';
+  for (let i = 0; i < str1.length; i++) {
+    for (let j = 0; j <= str1.length; j++) {
+      let substr = str1.slice(i, j);
+
+      if (str2.includes(substr) && substr.length > maxSubstr.length) {
+        maxSubstr = substr;
+      }
+    }
+  }
+  return maxSubstr;
 };
